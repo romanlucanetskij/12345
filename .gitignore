@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.swp
+Properties/launchSettings.json
+node_modules/
+wwwroot/lib/
+.nuget/

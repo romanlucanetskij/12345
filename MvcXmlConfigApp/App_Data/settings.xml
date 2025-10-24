@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns="http://schemas.example.com/settings">
+  <ApplicationName>Sample MVC XML App</ApplicationName>
+  <EnableFeatureX>true</EnableFeatureX>
+  <MaxItems>25</MaxItems>
+  <Theme>Light</Theme>
+  <RefreshIntervalSeconds>120</RefreshIntervalSeconds>
+</Settings>

@@ -1,0 +1,32 @@
+@model AppSettings
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<h1 class="mb-4">Settings</h1>
+
+@if (TempData["StatusMessage"] is string statusMessage)
+{
+    <div class="alert alert-success" role="alert">
+        @statusMessage
+    </div>
+}
+
+<dl class="row">
+    <dt class="col-sm-4">@Html.DisplayNameFor(m => m.ApplicationName)</dt>
+    <dd class="col-sm-8">@Model.ApplicationName</dd>
+
+    <dt class="col-sm-4">@Html.DisplayNameFor(m => m.EnableFeatureX)</dt>
+    <dd class="col-sm-8">@(Model.EnableFeatureX ? "Enabled" : "Disabled")</dd>
+
+    <dt class="col-sm-4">@Html.DisplayNameFor(m => m.MaxItems)</dt>
+    <dd class="col-sm-8">@Model.MaxItems</dd>
+
+    <dt class="col-sm-4">@Html.DisplayNameFor(m => m.Theme)</dt>
+    <dd class="col-sm-8">@Model.Theme</dd>
+
+    <dt class="col-sm-4">@Html.DisplayNameFor(m => m.RefreshIntervalSeconds)</dt>
+    <dd class="col-sm-8">@Model.RefreshIntervalSeconds</dd>
+</dl>
+
+<a asp-action="Edit" class="btn btn-primary">Edit settings</a>
