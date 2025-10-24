@@ -4,15 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<ISettingsService, XmlSettingsService>();
-builder.Services.AddSingleton<IStudentRepository, SqliteStudentRepository>();
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var studentRepository = scope.ServiceProvider.GetRequiredService<IStudentRepository>();
-    await studentRepository.InitializeAsync();
-}
 
 if (!app.Environment.IsDevelopment())
 {
